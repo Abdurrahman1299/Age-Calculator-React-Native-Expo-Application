@@ -2,8 +2,11 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import { useDispatch, useSelector } from "react-redux";
 import { updateDate, updateDayName } from "../store/ageReducer";
 import ModalCp from "./ModalCp";
+import { AppState } from "react-native";
+import { useState } from "react";
 
 export default function DatePicker() {
+  const [appState, setAppState] = useState(AppState.currentState);
   const dispatch = useDispatch();
   const birthYear = useSelector((state) => state.ageCalculator.date.year);
 
@@ -25,7 +28,7 @@ export default function DatePicker() {
       display="spinner"
       maximumDate={new Date()}
       minimumDate={new Date(1960, 1, 1)}
-      textColor="red"
+      negativeButton={{ label: "" }}
     />
   );
 }

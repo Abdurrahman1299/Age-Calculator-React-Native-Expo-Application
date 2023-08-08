@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Age Calculator",
-    "slug": "Age Calculator",
+    "name": "Age-Calculator",
+    "slug": "Age-Calculator",
     "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#345454"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -19,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#345454"
-      }
+      },
+      "package": "com.abdurrahman09.AgeCalculator"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2ee3c117-5e39-4caf-b8b4-56f382a803cc"
+      }
     }
   }
 }
